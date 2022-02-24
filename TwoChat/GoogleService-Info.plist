@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>979582254242-mb2gusl8c6u4vgh7r2as903t8eolbhep.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.979582254242-mb2gusl8c6u4vgh7r2as903t8eolbhep</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDt35issdf6T0tdGRbFGBokqmBK7i43xJs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>979582254242</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>baiaskhat.twochat.TwoChat</string>
+	<key>PROJECT_ID</key>
+	<string>twochat-a5181</string>
+	<key>STORAGE_BUCKET</key>
+	<string>twochat-a5181.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:979582254242:ios:551e887b22a14899c5abfb</string>
+</dict>
+</plist>
