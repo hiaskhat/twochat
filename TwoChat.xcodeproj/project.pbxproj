@@ -17,6 +17,7 @@
 		622DDD5B27C7736B00444AC6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 622DDD5A27C7736B00444AC6 /* FirebaseAuth */; };
 		622DDD5D27C7736B00444AC6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 622DDD5C27C7736B00444AC6 /* FirebaseFirestore */; };
 		62725F5C27C7853000FCE8C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62725F5B27C7853000FCE8C5 /* GoogleService-Info.plist */; };
+		62725F5E27C8AEAB00FCE8C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62725F5D27C8AEAB00FCE8C5 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		622DDD4D27C369F000444AC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		622DDD5527C74E2000444AC6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		62725F5B27C7853000FCE8C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		62725F5D27C8AEAB00FCE8C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				622DDD4327C369EC00444AC6 /* WelcomeViewController.swift */,
 				622DDD5527C74E2000444AC6 /* RegisterViewController.swift */,
+				62725F5D27C8AEAB00FCE8C5 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				622DDD4427C369EC00444AC6 /* WelcomeViewController.swift in Sources */,
 				622DDD4027C369EC00444AC6 /* AppDelegate.swift in Sources */,
 				622DDD4227C369EC00444AC6 /* SceneDelegate.swift in Sources */,
+				62725F5E27C8AEAB00FCE8C5 /* LoginViewController.swift in Sources */,
 				622DDD5627C74E2000444AC6 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

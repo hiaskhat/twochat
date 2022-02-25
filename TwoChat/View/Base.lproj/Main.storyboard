@@ -82,7 +82,7 @@
         <!--Log In View Controller-->
         <scene sceneID="aJo-Pu-gdn">
             <objects>
-                <viewController id="kaY-k3-dRo" userLabel="Log In View Controller" sceneMemberID="viewController">
+                <viewController id="kaY-k3-dRo" userLabel="Log In View Controller" customClass="LoginViewController" customModule="TwoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yli-v9-JvL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -130,6 +130,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Log In">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="kaY-k3-dRo" eventType="touchUpInside" id="U7I-lw-2Qa"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -162,6 +165,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="y9B-p0-d9u"/>
                     <connections>
+                        <outlet property="emailTextField" destination="FDG-NX-fde" id="bK4-77-Xzw"/>
+                        <outlet property="passwordTextField" destination="Xuc-No-QwT" id="wE5-pe-9y2"/>
                         <segue destination="xC3-Wa-Lbv" kind="show" identifier="LoginToChat" id="ZdD-Cm-g4Y"/>
                     </connections>
                 </viewController>
@@ -355,7 +360,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZdD-Cm-g4Y"/>
+        <segue reference="Wsh-O1-zmY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
