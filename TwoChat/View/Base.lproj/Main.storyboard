@@ -269,10 +269,10 @@
             </objects>
             <point key="canvasLocation" x="2116" y="-375"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="6Zx-b2-oXm">
             <objects>
-                <viewController id="xC3-Wa-Lbv" sceneMemberID="viewController">
+                <viewController id="xC3-Wa-Lbv" customClass="ChatViewController" customModule="TwoChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gu9-GB-Ri3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,6 +302,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="paperplane.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="xC3-Wa-Lbv" eventType="touchUpInside" id="4z4-bX-Xda"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -327,7 +330,17 @@
                             <constraint firstItem="y52-jU-dKj" firstAttribute="top" secondItem="KEf-wB-7jk" secondAttribute="top" constant="-45" id="vrz-zP-3zc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="DeO-e8-kjY"/>
+                    <navigationItem key="navigationItem" id="DeO-e8-kjY">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="8T1-3p-lxe">
+                            <connections>
+                                <action selector="logOutPressed:" destination="xC3-Wa-Lbv" id="Oft-OU-Zfr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageTextField" destination="Qf0-eB-ud0" id="uz4-xt-dgL"/>
+                        <outlet property="tableView" destination="y52-jU-dKj" id="el0-iM-TPv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWp-Wf-BRT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
