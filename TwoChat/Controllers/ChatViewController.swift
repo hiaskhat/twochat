@@ -49,5 +49,48 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+        
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: false)
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
+    }
+}
+
+//MARK: - Table View Data Source methods
+
+extension ChatViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageCell
+        cell.label.text = message.body
+        
+        //setting different style for sender and not sender
+        
+        //this is a message from a current user
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: "yellow")
+            cell.label.textColor = UIColor(named: "black")
+        }
+        
+        //this is a message from another user
+        else {
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: "orange")
+            cell.label.textColor = UIColor(named: "grey")
+        }
+    
+        return cell
     }
 }
