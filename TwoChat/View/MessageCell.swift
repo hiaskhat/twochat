@@ -20,6 +20,7 @@ class MessageCell: UITableViewCell {
         // Initialization code
         messageBubble.layer.cornerRadius = messageBubble.frame.size.height / 2.5
         leftImageView.layer.cornerRadius = leftImageView.frame.size.height / 2
+        rightImageView.layer.cornerRadius = rightImageView.frame.size.height / 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

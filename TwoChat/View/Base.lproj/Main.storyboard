@@ -277,8 +277,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y52-jU-dKj">
-                                <rect key="frame" x="0.0" y="-45" width="414" height="759"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y52-jU-dKj">
+                                <rect key="frame" x="0.0" y="-5" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-nJ-us5">
@@ -327,7 +327,7 @@
                             <constraint firstItem="KEf-wB-7jk" firstAttribute="trailing" secondItem="y52-jU-dKj" secondAttribute="trailing" id="cLs-g5-Tzp"/>
                             <constraint firstItem="BtE-nJ-us5" firstAttribute="leading" secondItem="KEf-wB-7jk" secondAttribute="leading" id="ozL-vn-LTT"/>
                             <constraint firstItem="BtE-nJ-us5" firstAttribute="top" secondItem="y52-jU-dKj" secondAttribute="bottom" id="qd8-VU-nLQ"/>
-                            <constraint firstItem="y52-jU-dKj" firstAttribute="top" secondItem="KEf-wB-7jk" secondAttribute="top" constant="-45" id="vrz-zP-3zc"/>
+                            <constraint firstItem="y52-jU-dKj" firstAttribute="top" secondItem="KEf-wB-7jk" secondAttribute="top" constant="-5" id="vrz-zP-3zc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DeO-e8-kjY">

@@ -26,6 +26,46 @@ class ChatViewController: UIViewController {
         
         tableView.dataSource = self
         
+        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        
+        loadMessages()
+    }
+    
+    func loadMessages() {
+        db.collection("messages")
+            .order(by: "date")
+            .addSnapshotListener { (querySnapshot, error) in
+                
+                //first we clear the messages inside the closure so in tableView
+                //we will show only current message without repeating all the old messages
+                
+                self.messages = []
+                
+                if let e = error {
+                    print("There was an issue retrieving data from Firestore, \(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            if let messageSender = data["sender"] as? String,
+                               let messageBody = data["body"] as? String {
+                                //optional binding because we retrieve data from an array
+                                //'as? String' because data coming from db is Any type
+                                let newMessage = Message(sender: messageSender, body: messageBody)
+                                self.messages.append(newMessage)
+                                
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                                }
+                            }
+                                
+                        }
+                    }
+                }
+                
+            }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
